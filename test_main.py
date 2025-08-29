@@ -21,7 +21,7 @@ def test_isolationforest_model():
     r = client.post("/predict/isolationforest/", json=payload)
     
     assert r.status_code == 200
-    # "Predict" key'i olduğuna emin ol
+    
     assert "Predict" in r.json()
-    # Değerin 0(normal) veya 1(anormal) olduğuna emin ol
+    
     assert r.json()["Predict"] in [0, 1]

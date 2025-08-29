@@ -27,10 +27,10 @@ def _to_df(predict_values: MLModelSchema) -> pd.DataFrame:
     data = predict_values.model_dump() if hasattr(predict_values, "model_dump") else predict_values.dict()
     return pd.DataFrame([data])
 
-# 🎯 Tahminleri 0(normal)/1(anormal) formatına çevir
+# 🎯 
 def _map_to_label(val) -> int:
-    # IsolationForest çıktısı: 1 -> normal, -1 -> anormal
-    return 0 if val == 1 else 1  # Normal = 0, Anormal = 1
+    
+    return 0 if val == 1 else 1  
 
 # 🎯 IsolationForest modeli yükle
 def _load_if_model():
@@ -48,6 +48,6 @@ def isolationforest_predict(predict_values: MLModelSchema):
     model = _load_if_model()
     scaler = _load_scaler()
     df = _to_df(predict_values)
-    df_scaled = scaler.transform(df)  # Ölçeklendirme burada yapılır
+    df_scaled = scaler.transform(df)  
     pred = model.predict(df_scaled)
     return {"Predict": _map_to_label(pred[0])}

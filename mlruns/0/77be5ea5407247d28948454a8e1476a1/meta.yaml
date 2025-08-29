@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/Emre/Desktop/AYIKLA%2024-10-2023/bootcamp/DATA%20ENGINEER_2024/X/CI-CD-MLOPS5/CI-CD-MLOPS-2/CI-CD-MLOPS/mlruns/0/77be5ea5407247d28948454a8e1476a1/artifacts
+end_time: 1756396731744
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 77be5ea5407247d28948454a8e1476a1
+run_name: IsolationForest-run
+run_uuid: 77be5ea5407247d28948454a8e1476a1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756396513018
+status: 3
+tags: []
+user_id: Now
